@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<title>Darkmira, applications web sécurisées</title>
-<meta name="description" content="Darkmira : expertise du développement d'applications web sécurisées depuis 2009, chez des grands comptes comme chez des TPE.">
+<title>Audit de code et de sécurité, Darkmira</title>
+<meta name="description" content="Darkmira audite des applications web depuis 2009 : sécurité selon l'OWASP, performances et fonctionnel, pour des grands comptes comme pour des PME.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#16293A">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -17,162 +17,129 @@
 <body>
 <a class="evitement" href="#contenu">Aller au contenu</a>
 
-<a class="bandeau" href="https://service.darkmira.fr/"><strong>Nouveau : Darkmira Service</strong> aide les TPE et les PME dont l'application métier est devenue difficile à maintenir. <span>En savoir plus</span></a>
-
 <div class="rempart">
   <header class="cadre entete">
     <a class="entete__logo" href="/" aria-label="Darkmira, accueil"><svg viewBox="0 0 735.1 173.5" aria-hidden="true" focusable="false"><path fill="currentColor" d="M67.9,28.1c1.5,0.4,4.7,0.4,6.2,0v-6.5H78v6.5c1.5,0.4,4.7,0.4,6.2,0v-6.5h3.8v22.6c0,7.4,0,16.8,0,22.3c0,4-2.8,7.7-4.8,11c-5.9,9.7-18.4,24.4-20.4,26.4c-2,2-4.3,4.3-4.3,4.3s-4.8,4.8-8.6,5.8c8-8.9,14.1-22,14.2-39.1c0.1-16.8-0.1-35.8,0-53.3h3.8V28.1z"></path><path fill="#81A61B" d="M88.1,83.1c3-7.8,9.2-12.5,19-13.4c1.1-0.1,3.6,0,3.6,0c7.1,0.4,13.6,4.3,19,10.6c4.1-6,10.5-9.7,19.7-10.6c1.3-0.1,2.4,0,2.4,0c14.5,1.6,23.4,12.3,23.3,23.8c0,1.7,0,35.5,0,35.5c-1,3.8-8.5,3.8-8.6-0.7c-0.2-11.5,0.3-23.7-0.2-34.8c-0.7-8.9-5.8-13.1-14.2-14.6c-1.4-0.2-3.7-0.2-4.8,0c-7.6,1.4-12,6.4-13.2,14.4c-0.6,11-0.1,23.1-0.2,34.6c0.2,5-7.8,5.2-8.6,1V98c0-11.1-4.4-17.8-14.2-19.2c-2.3-0.2-2.6-0.2-4.6,0c-11.9,1.4-14.7,11.8-14.2,25.7C90.5,97.6,88.9,90.7,88.1,83.1"></path><path fill="currentColor" d="M88.1,83c0.9,7.6,2.4,14.6,4.1,21.4c2.8,10.3,6.8,19.3,11.8,27.4h-12H49.4c-9.6-0.2-16.4-3.7-21.4-7.9c-5-4.2-10.4-13.8-10.3-23c-0.2-13.3,9-22.1,10.8-23.5c3.9-3.2,10-6.8,18.7-7.4c0,0,1.5-0.1,2.9,0c4.5,0.5,10.5,0.9,10.6,5.8c0,2.8-2.3,4.8-6.2,4.8c-3,0-1.9,0-7,0.2c-12.7,0.6-20.1,10.8-19,22.6c1,10.3,11.3,20.9,25.2,17.3c6.1-1.6,16.7-11.7,17.8-13C78.4,100.7,83.2,91.9,88.1,83"></path><path fill="currentColor" d="M262.7,43.4c0-1,0.3-1.8,1-2.5c0.7-0.7,1.5-1,2.5-1s1.8,0.3,2.5,1s1,1.5,1,2.5v55.3c0,8.7-3.1,16.2-9.3,22.4c-6.2,6.2-13.7,9.3-22.4,9.3s-16.2-3.1-22.4-9.3c-6.2-6.2-9.3-13.7-9.3-22.4c0-8.7,3.1-16.2,9.3-22.4c6.2-6.2,13.6-9.3,22.4-9.3s16.2,3.1,22.4,9.3l2.2,2.2V43.4z M262.7,98.8c0-6.8-2.4-12.6-7.2-17.4c-4.8-4.8-10.6-7.2-17.4-7.2s-12.6,2.4-17.4,7.2c-4.8,4.8-7.2,10.6-7.2,17.4s2.4,12.6,7.2,17.4c4.8,4.8,10.6,7.2,17.4,7.2s12.6-2.4,17.4-7.2C260.3,111.4,262.7,105.6,262.7,98.8z"></path><path fill="currentColor" d="M335.1,119c-7.6,7.7-15.8,11.5-24.6,11.5c-8.7,0-16.2-3.1-22.4-9.3c-6.2-6.2-9.3-13.7-9.3-22.4c0-8.7,3.1-16.2,9.3-22.4c6.2-6.2,13.6-9.3,22.4-9.3s16.2,3.1,22.4,9.3c6.2,6.2,9.3,13.7,9.3,22.4v28.2c0,1-0.3,1.8-1,2.5s-1.5,1-2.5,1s-1.8-0.3-2.5-1c-0.7-0.7-1-1.5-1-2.5V119z M310.5,74.1c-6.8,0-12.6,2.4-17.4,7.2c-4.8,4.8-7.2,10.6-7.2,17.4s2.4,12.6,7.2,17.4c4.8,4.8,10.6,7.2,17.4,7.2s12.6-2.4,17.4-7.2c4.8-4.8,7.2-10.6,7.2-17.4c0-6.8-2.4-12.6-7.2-17.4C323.1,76.5,317.2,74.1,310.5,74.1z"></path><path fill="currentColor" d="M351.4,70.6c0-1,0.3-1.8,1-2.5s1.5-1,2.5-1s1.8,0.3,2.5,1s1,1.5,1,2.5v8c7.7-7.7,15.9-11.5,24.7-11.5c4.7,0,8.7,0.7,12.1,2.2c0.6,0.2,1.2,0.6,1.6,1.1c0.6,0.6,1,1.5,1,2.5c0,1-0.3,1.8-1,2.5s-1.5,1-2.5,1c-0.6,0-1.1-0.1-1.6-0.3c-2.6-1.3-5.8-1.9-9.6-1.9c-6.8,0-12.6,2.4-17.4,7.2c-4.8,4.8-7.2,10.6-7.2,17.4v28.2c0,1-0.3,1.8-1,2.5s-1.5,1-2.5,1s-1.8-0.3-2.5-1s-1-1.5-1-2.5V70.6z"></path><path fill="currentColor" d="M412.6,94.6l41.5-27c0.5-0.3,1.2-0.5,1.9-0.5c1,0,1.8,0.3,2.5,1s1,1.5,1,2.5c0,1.2-0.4,2.1-1.1,2.7L429.7,92l28.8,32.5c0.6,0.7,1,1.5,1,2.5c0,1-0.3,1.8-1,2.5s-1.5,1-2.5,1c-1,0-1.8-0.4-2.5-1.1l-29.8-33.5l-11,7.2v23.9c0,1-0.3,1.8-1,2.5c-0.7,0.7-1.5,1-2.5,1s-1.8-0.3-2.5-1c-0.7-0.7-1-1.5-1-2.5V43.3c0-1,0.3-1.8,1-2.5c0.7-0.7,1.5-1,2.5-1s1.8,0.3,2.5,1c0.7,0.7,1,1.5,1,2.5V94.6z"></path><path fill="#81A61B" d="M475.6,126.9c0,1-0.3,1.8-1,2.5s-1.5,1-2.5,1c-1,0-1.8-0.3-2.5-1c-0.7-0.7-1-1.5-1-2.5V70.6c0-1,0.3-1.8,1-2.5c0.7-0.7,1.5-1,2.5-1c1,0,1.8,0.3,2.5,1s1,1.5,1,2.5v3.8c5.7-4.9,11.6-7.3,17.6-7.3c6.8,0,12.6,2.4,17.4,7.2c1.2,1.2,2.4,2.7,3.7,4.4c1.3-1.7,2.5-3.2,3.7-4.4c4.8-4.8,10.6-7.2,17.4-7.2s12.6,2.4,17.4,7.2c4.8,4.8,7.2,10.6,7.2,17.4v35.2c0,1-0.3,1.8-1,2.5s-1.5,1-2.5,1s-1.8-0.3-2.5-1s-1-1.5-1-2.5V91.7c0-4.9-1.7-9-5.2-12.4c-3.5-3.5-7.6-5.2-12.4-5.2c-4.8,0-9,1.7-12.4,5.2c-3.4,3.4-5.1,7.6-5.1,12.4v35.2c0,1-0.3,1.8-1,2.5s-1.5,1-2.5,1s-1.8-0.3-2.5-1s-1-1.5-1-2.5V91.7c0-4.9-1.7-9-5.1-12.4c-3.5-3.5-7.6-5.2-12.4-5.2c-4.8,0-9,1.7-12.4,5.2c-3.4,3.4-5.1,7.6-5.1,12.4V126.9z"></path><path fill="#81A61B" d="M581.7,51.8c0,1.3-0.5,2.4-1.4,3.3c-0.9,0.9-2,1.4-3.3,1.4c-1.3,0-2.4-0.5-3.3-1.4c-0.9-0.9-1.4-2-1.4-3.3c0-1.3,0.5-2.4,1.4-3.3c0.9-0.9,2-1.4,3.3-1.4c1.3,0,2.4,0.5,3.3,1.4C581.2,49.4,581.7,50.5,581.7,51.8z M573.5,70.6c0-1,0.3-1.8,1-2.5c0.7-0.7,1.5-1,2.5-1c1,0,1.8,0.3,2.5,1c0.7,0.7,1,1.5,1,2.5v56.3c0,1-0.3,1.8-1,2.5c-0.7,0.7-1.5,1-2.5,1c-1,0-1.8-0.3-2.5-1c-0.7-0.7-1-1.5-1-2.5V70.6z"></path><path fill="#81A61B" d="M595.7,70.6c0-1,0.3-1.8,1-2.5s1.5-1,2.5-1s1.8,0.3,2.5,1s1,1.5,1,2.5v8c7.7-7.7,15.9-11.5,24.7-11.5c4.7,0,8.7,0.7,12.1,2.2c0.6,0.2,1.2,0.6,1.6,1.1c0.6,0.6,1,1.5,1,2.5c0,1-0.3,1.8-1,2.5s-1.5,1-2.5,1c-0.6,0-1.1-0.1-1.6-0.3c-2.6-1.3-5.8-1.9-9.6-1.9c-6.8,0-12.6,2.4-17.4,7.2c-4.8,4.8-7.2,10.6-7.2,17.4v28.2c0,1-0.3,1.8-1,2.5s-1.5,1-2.5,1s-1.8-0.3-2.5-1s-1-1.5-1-2.5V70.6z"></path><path fill="#81A61B" d="M706.1,119c-7.6,7.7-15.8,11.5-24.6,11.5c-8.7,0-16.2-3.1-22.4-9.3c-6.2-6.2-9.3-13.7-9.3-22.4c0-8.7,3.1-16.2,9.3-22.4c6.2-6.2,13.6-9.3,22.4-9.3s16.2,3.1,22.4,9.3c6.2,6.2,9.3,13.7,9.3,22.4v28.2c0,1-0.3,1.8-1,2.5s-1.5,1-2.5,1s-1.8-0.3-2.5-1c-0.7-0.7-1-1.5-1-2.5V119z M681.5,74.1c-6.8,0-12.6,2.4-17.4,7.2c-4.8,4.8-7.2,10.6-7.2,17.4s2.4,12.6,7.2,17.4c4.8,4.8,10.6,7.2,17.4,7.2s12.6-2.4,17.4-7.2c4.8-4.8,7.2-10.6,7.2-17.4c0-6.8-2.4-12.6-7.2-17.4C694.1,76.5,688.3,74.1,681.5,74.1z"></path></svg></a>
     <nav aria-label="Navigation principale">
-      <a href="#expertise">Expertise</a>
-      <a href="/audits.html">Audits</a>
-      <a href="#charte">Charte</a>
-      <a href="#communaute">Communauté</a>
-      <a href="#contact">Contact</a>
+      <a href="/#expertise">Expertise</a>
+      <a href="/audits.html" aria-current="page">Audits</a>
+      <a href="/#charte">Charte</a>
+      <a href="/#contact">Contact</a>
       <a class="bouton bouton--vert" href="https://service.darkmira.fr/">Darkmira Service</a>
     </nav>
   </header>
 
   <section class="cadre hero">
-    <h1>Applications web sécurisées.</h1>
-    <p class="chapeau">Nous capitalisons sur une expertise du développement d'applications depuis 2009, chez des grands comptes comme chez des TPE, et bien souvent sur du code écrit par d'autres.</p>
+    <h1>Savoir ce que contient vraiment votre application.</h1>
+    <p class="chapeau">Nous auditons des applications web depuis 2009, pour des grands comptes comme pour des PME. La sécurité d'abord, mais aussi les performances et le fonctionnel.</p>
   </section>
   <svg class="hero__tour" viewBox="0 0 192 173.5" aria-hidden="true" focusable="false"><path class="t" d="M68.3,31c1.5,0.4,4.7,0.4,6.2,0v-6.5h3.8V31c1.5,0.4,4.7,0.4,6.2,0v-6.5h3.8v22.6c0,7.4,0,16.8,0,22.3c0,4-2.8,7.7-4.8,11c-5.9,9.7-18.4,24.4-20.4,26.4c-2,2-4.3,4.3-4.3,4.3s-4.8,4.8-8.6,5.8c8-8.9,14.1-22,14.2-39.1c0.1-16.8-0.1-35.8,0-53.3h3.8V31z"/><path class="m" d="M88.5,86c3-7.8,9.2-12.5,19-13.4c1.1-0.1,3.6,0,3.6,0c7.1,0.4,13.6,4.3,19,10.6c4.1-6,10.5-9.7,19.7-10.6c1.3-0.1,2.4,0,2.4,0c14.5,1.6,23.4,12.3,23.3,23.8c0,1.7,0,35.5,0,35.5c-1,3.8-8.5,3.8-8.6-0.7c-0.2-11.5,0.3-23.7-0.2-34.8c-0.7-8.9-5.8-13.1-14.2-14.6c-1.4-0.2-3.7-0.2-4.8,0c-7.6,1.4-12,6.4-13.2,14.4c-0.6,11-0.1,23.1-0.2,34.6c0.2,5-7.8,5.2-8.6,1v-30.7c0-11.1-4.4-17.8-14.2-19.2c-2.3-0.2-2.6-0.2-4.6,0C94.8,83,92,93.5,92.5,107.3C90.9,100.5,89.3,93.6,88.5,86"/><path class="t" d="M88.5,85.9c0.9,7.6,2.4,14.6,4.1,21.4c2.8,10.3,6.8,19.3,11.8,27.4h-12H49.8c-9.6-0.2-16.4-3.7-21.4-7.9c-5-4.2-10.4-13.8-10.3-23C18,90.4,27.2,81.5,29,80.2c3.9-3.2,10-6.8,18.7-7.4c0,0,1.5-0.1,2.9,0c4.5,0.5,10.5,0.9,10.6,5.8c0,2.8-2.3,4.8-6.2,4.8c-3,0-1.9,0-7,0.2c-12.7,0.6-20.1,10.8-19,22.6c1,10.3,11.3,20.9,25.2,17.3c6.1-1.6,16.7-11.7,17.8-13C78.8,103.6,83.6,94.8,88.5,85.9"/></svg>
 </div>
 
 <main id="contenu">
-  <section class="section" id="expertise" aria-labelledby="expertise-titre">
-    <div class="cadre">
-      <div class="charte__tete">
-        <h2 id="expertise-titre">Ce que nous faisons.</h2>
-        <p class="chapeau">Nous développons des applications web pour des grands comptes comme pour des TPE, et nous reprenons celles que d'autres ont écrites.</p>
+  <section class="section" aria-labelledby="pourquoi-titre">
+    <div class="cadre colonnes">
+      <div class="colonnes__tete">
+        <h2 id="pourquoi-titre">Des applications qui vont plus vite que leur contrôle.</h2>
       </div>
-      <ul class="activites">
-        <li>
-          <h3>Développement sur mesure</h3>
-          <p>Nous concevons et développons des applications web adaptées à votre métier, de la première version à la mise en production.</p>
-        </li>
-        <li>
-          <h3>Renfort d'équipes</h3>
-          <p>Nos développeurs rejoignent vos équipes, travaillent avec vos outils et suivent vos méthodes.</p>
-        </li>
-        <li>
-          <h3>Reprise et maintenance</h3>
-          <p>Nous reprenons des applications existantes, souvent écrites par d'autres, et nous les faisons vivre dans la durée.</p>
-        </li>
-        <li>
-          <h3>Audit de code</h3>
-          <p>Nous analysons votre code sous l'angle de la sécurité, des performances et de la qualité. Vous savez où sont les risques et par quoi commencer.</p>
-          <p><a href="/audits.html">Nos audits en détail</a></p>
-        </li>
-      </ul>
+      <div class="texte">
+        <p>Les applications se multiplient et évoluent plus vite qu'avant. Une partie est créée ou modifiée hors du service informatique, par des équipes qui ont besoin d'un outil tout de suite, de plus en plus souvent avec des assistants d'IA.</p>
+        <p>C'est le shadow IT : des applications utilisées tous les jours, parfois avec des données sensibles, dont personne n'a une vue complète.</p>
+        <p class="encadre">Un audit vous dit ce qui tourne réellement, à quel niveau de risque, et par quoi commencer.</p>
+      </div>
     </div>
   </section>
 
-  <section class="section blanc" id="securite" aria-labelledby="securite-titre">
+  <section class="section blanc" aria-labelledby="types-titre">
     <div class="cadre">
       <div class="charte__tete">
-        <h2 id="securite-titre">La sécurité se pense à chaque phase de la vie d'une application.</h2>
-        <p class="chapeau">Notre référence est l'OWASP. Ses recommandations nous guident de la conception jusqu'à la maintenance, pas seulement au moment de livrer.</p>
+        <h2 id="types-titre">Trois angles, la sécurité en premier.</h2>
+      </div>
+      <div class="audits">
+        <article class="audits__principal">
+          <h3>Sécurité</h3>
+          <p>Une revue de code manuelle, menée selon l'OWASP Top 10 dans sa version 2025, complétée par des outils d'analyse. Nous cherchons notamment :</p>
+          <ul>
+            <li>les contrôles d'accès défaillants : qui peut voir ou modifier quoi, falsification de requête intersites (CSRF) comprise ;</li>
+            <li>les erreurs de configuration ;</li>
+            <li>les failles de la chaîne logicielle : dépendances et composants vulnérables ;</li>
+            <li>les défauts de chiffrement et les fuites d'informations ;</li>
+            <li>les injections, dont l'injection SQL et le cross-site scripting (XSS) ;</li>
+            <li>les failles d'authentification.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Performances</h3>
+          <p>Ce qui ralentit l'application aujourd'hui, et ce qui l'empêchera de tenir quand le nombre d'utilisateurs ou de données augmentera.</p>
+        </article>
+        <article>
+          <h3>Fonctionnel</h3>
+          <p>L'application respecte-t-elle ce qui était prévu ? Nous la comparons au cahier des charges et aux parcours attendus, cas limites compris.</p>
+        </article>
+      </div>
+      <p class="audits__renvoi">Plus personne ne sait ce que fait votre application ? C'est le rôle de <a href="https://service.darkmira.fr/">Darkmira Service</a>.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="deroule-titre">
+    <div class="cadre">
+      <div class="charte__tete">
+        <h2 id="deroule-titre">Comment se déroule un audit.</h2>
       </div>
       <ol class="phases">
         <li>
-          <h3>Conception</h3>
-          <p>Les données sensibles et les risques sont identifiés dès les choix d'architecture.</p>
+          <h3>Cadrage</h3>
+          <p>Le périmètre, les accès au code et ce que vous attendez de l'audit.</p>
         </li>
         <li>
-          <h3>Développement</h3>
-          <p>Le code suit les recommandations de l'OWASP, et chaque modification est relue avant d'être intégrée.</p>
+          <h3>Analyse</h3>
+          <p>La revue de code manuelle selon l'OWASP Top 10:2025, et les outils qui la complètent.</p>
         </li>
         <li>
-          <h3>Mise en production</h3>
-          <p>Les tests automatisés tournent à chaque modification. Rien ne part en production sans les avoir passés.</p>
+          <h3>Cartographie des risques</h3>
+          <p>En option : chaque faille placée selon son impact et sa facilité d'exploitation.</p>
         </li>
         <li>
-          <h3>Maintenance</h3>
-          <p>Les dépendances sont surveillées, et les failles connues corrigées dès leur publication.</p>
+          <h3>Restitution</h3>
+          <p>Un rapport écrit et une présentation, avec des actions classées par priorité.</p>
         </li>
       </ol>
     </div>
   </section>
 
-  <section class="section" id="charte" aria-labelledby="charte-titre">
-    <div class="cadre">
-      <div class="charte__tete">
-        <h2 id="charte-titre">Notre charte des développeurs.</h2>
-        <p class="chapeau">Chaque développeur de Darkmira la signe. Elle décrit comment nous travaillons, et elle tient en trois idées.</p>
-      </div>
-      <div class="esprits">
-        <article>
-          <h3>L'esprit entrepreneurial</h3>
-          <p class="esprits__intro">Le développeur Darkmira ne se contente pas d'exécuter. Il s'engage dans ses projets et dans sa propre progression.</p>
-          <dl>
-            <dt>Engagement</dt><dd>Il est proactif, autonome et assume ses responsabilités.</dd>
-            <dt>Volontariat</dt><dd>Il partage spontanément ce qu'il sait avec l'équipe et avec son réseau.</dd>
-            <dt>Entraide</dt><dd>Ses collègues savent qu'ils peuvent compter sur lui.</dd>
-          </dl>
-        </article>
-        <article>
-          <h3>L'esprit hacker</h3>
-          <p class="esprits__intro">Au sens premier du mot : la curiosité, et le goût de comprendre comment les choses fonctionnent.</p>
-          <dl>
-            <dt>Implication</dt><dd>Il suit l'actualité technique, contribue à l'open source et participe à des événements.</dd>
-            <dt>Partage</dt><dd>Il transmet ce qu'il sait et échange sur les bonnes pratiques.</dd>
-            <dt>Expérimentation</dt><dd>Il teste par lui-même pour comprendre, plutôt que de subir la technique.</dd>
-          </dl>
-        </article>
-        <article>
-          <h3>L'esprit d'industrialisation</h3>
-          <p class="esprits__intro">Il écrit des applications faites pour durer.</p>
-          <dl>
-            <dt>Fiabilité</dt><dd>Il vérifie que l'application fait ce qui est demandé, avec des tests automatisés.</dd>
-            <dt>Maintenabilité</dt><dd>Il suit les bonnes pratiques et automatise le contrôle de la qualité.</dd>
-            <dt>Sécurité</dt><dd>Il pense à la sécurité à chaque étape de la vie d'une application.</dd>
-          </dl>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section engagement" id="communaute" aria-labelledby="communaute-titre">
+  <section class="section blanc" aria-labelledby="carte-titre">
     <div class="cadre colonnes">
       <div class="colonnes__tete">
-        <h2 id="communaute-titre">Notre place dans les communautés techniques.</h2>
-        <p class="chapeau">Depuis nos débuts, nous sommes actifs dans les communautés techniques.</p>
+        <h2 id="carte-titre">La cartographie des risques.</h2>
+        <p class="chapeau">Chaque faille trouvée est placée selon deux critères : son impact sur votre activité, et la facilité avec laquelle elle peut être exploitée. Vous voyez d'un coup d'œil ce qui doit être traité en priorité.</p>
       </div>
-      <ul class="liste-filets">
-        <li>
-          <h3>Des événements</h3>
-          <p>Nous sponsorisons, soutenons et participons à des événements des communautés techniques, en France et à l'étranger. Nous en organisons aussi : conférences, meetups et groupes d'utilisateurs.</p>
-        </li>
-        <li>
-          <h3>Des écoles</h3>
-          <p>Nos développeurs et nos dirigeants enseignent dans des écoles. Nous les accompagnons aussi pour organiser des événements et des meetups pour leurs élèves, afin de leur montrer le métier tel qu'il se pratique.</p>
-        </li>
-        <li>
-          <h3>L'open source</h3>
-          <p>Nous aimons contribuer à des projets open source, et rendre aux communautés une partie de ce qu'elles nous apportent.</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section offre" aria-labelledby="offre-titre">
-    <div class="cadre">
-      <div>
-        <p class="offre__nom">Darkmira Service</p>
-        <h2 id="offre-titre">Votre application métier est en déshérence ?</h2>
-        <p class="chapeau">Nous la remettons sous contrôle et nous en facilitons la gestion grâce à l'IA.</p>
-      </div>
-      <div class="offre__action">
-        <a class="bouton bouton--vert" href="https://service.darkmira.fr/">Voir l'offre Darkmira Service</a>
-      </div>
+      <figure class="carte">
+        <div class="carte__zone">
+          <span class="carte__axe carte__axe--y">Facilité d'exploitation</span>
+          <div class="carte__grille" role="img" aria-label="Grille de quatre sur quatre : plus l'impact et la facilité d'exploitation sont élevés, plus le risque est grave.">
+            <span class="g-eleve"></span><span class="g-eleve"></span><span class="g-critique"></span><span class="g-critique"></span>
+            <span class="g-moyen"></span><span class="g-eleve"></span><span class="g-eleve"></span><span class="g-critique"></span>
+            <span class="g-moyen"></span><span class="g-moyen"></span><span class="g-eleve"></span><span class="g-eleve"></span>
+            <span class="g-reduit"></span><span class="g-moyen"></span><span class="g-moyen"></span><span class="g-eleve"></span>
+          </div>
+          <span class="carte__axe carte__axe--x">Impact</span>
+        </div>
+        <figcaption>
+          <dl class="carte__legende">
+            <div><dt><span class="g-critique"></span>Risque critique</dt><dd>Actions prioritaires à mener.</dd></div>
+            <div><dt><span class="g-eleve"></span>Risque élevé</dt><dd>Des dispositions sont nécessaires pour le réduire.</dd></div>
+            <div><dt><span class="g-moyen"></span>Risque moyen</dt><dd>Vérifier s'il faut le réduire.</dd></div>
+            <div><dt><span class="g-reduit"></span>Risque réduit</dt><dd>Aucune disposition nécessaire.</dd></div>
+          </dl>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
   <section class="section contact" id="contact" aria-labelledby="contact-titre">
     <div class="cadre">
-      <h2 id="contact-titre">Nous écrire.</h2>
-      <a class="bouton bouton--nuit" href="mailto:contact@darkmira.fr">contact@darkmira.fr</a>
+      <h2 id="contact-titre">Parlons de votre application.</h2>
+      <a class="bouton bouton--nuit" href="mailto:contact@darkmira.fr?subject=Audit">contact@darkmira.fr</a>
     </div>
   </section>
 </main>
@@ -184,13 +151,9 @@
       <p>Expertise du développement d'applications depuis 2009.</p>
     </div>
     <nav aria-label="Pied de page">
+      <a href="/">Accueil</a>
       <a href="https://service.darkmira.fr/">Darkmira Service</a>
-      <a href="#expertise">Expertise</a>
-      <a href="/audits.html">Audits</a>
-      <a href="#securite">Sécurité</a>
-      <a href="#charte">Charte</a>
-      <a href="#communaute">Communauté</a>
-      <a href="#contact">Contact</a>
+      <a href="/#contact">Contact</a>
       <a href="/mentions-legales.html">Mentions légales</a>
     </nav>
   </div>
