@@ -394,7 +394,7 @@ p { margin: 0; }
 @media (max-width: 600px) {
   .entete { flex-wrap: nowrap; }
   .entete nav { width: auto; }
-  .entete nav a:not(.bouton):not(.langue) { display: none; }
+  .entete nav > a:not(.bouton) { display: none; }
 }
 
 /* Mentions légales */
@@ -499,7 +499,7 @@ p { margin: 0; }
 .entete__logo { flex: none; }
 .entete nav a { white-space: nowrap; }
 @media (max-width: 900px) {
-  .entete nav a:not(.bouton):not(.langue) { display: none; }
+  .entete nav > a:not(.bouton) { display: none; }
 }
 
 .audits__renvoi {
@@ -510,21 +510,27 @@ p { margin: 0; }
 }
 .audits__renvoi a { font-weight: 700; }
 
-/* Sélecteur de langue */
-.entete nav a.langue {
-  padding: 4px 9px;
-  border: 1px solid rgba(255, 255, 255, .45);
-  border-radius: 4px;
+/* Sélecteur de langue : interrupteur FR | EN, la langue active est surlignée */
+.langues {
+  display: inline-flex;
+  border: 1px solid rgba(255, 255, 255, .55);
+  border-radius: 6px;
+  overflow: hidden;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: .04em;
-  line-height: 1.2;
+  line-height: 1;
 }
-.entete nav a.langue:hover { border-color: var(--vert-clair); }
+.langues > * { padding: 7px 10px; }
+.langues__actuelle { background: var(--blanc); color: var(--nuit); }
+.entete nav .langues a { color: var(--blanc); text-decoration: none; }
+.entete nav .langues a:hover { background: rgba(255, 255, 255, .14); color: var(--blanc); }
 @media (max-width: 600px) {
   .entete nav { gap: 12px; }
-}
-@media (max-width: 600px) {
   .entete__logo svg { width: 118px; }
   .entete .bouton { min-height: 40px; padding: 6px 12px; font-size: 14px; }
+}
+@media (max-width: 600px) {
+  /* Le bandeau vert mène déjà à Darkmira Service : sur mobile, l'en-tête garde le logo et la langue */
+  .entete nav > .bouton { display: none; }
 }
